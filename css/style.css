@@ -1,5 +1,7 @@
 @import "./utilities.css";
 @import "./variables.css";
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 
 * {
   padding: 0;
@@ -506,12 +508,15 @@ header nav .nav-right .search > img {
   font-weight: bold;
   margin: 0 0 0.7em;
   color: white; /* Replace $color-black with the actual value */
+  font-family:'PT Serif', serif;
+  font-size: 1.5em;
 }
 
-.card p,
-.card h2 {
+.card p {
   transition: all 0.3s ease-out;
   opacity: var(--active);
+  font-family:'PT Serif', serif;
+  font-size: 1em;
 }
 
 .navs {
@@ -540,4 +545,39 @@ header nav .nav-right .search > img {
 svg{
     width: 50px;
     height: 50px;
+}
+@media (max-width:742px) {
+  .carousel{
+    width: 23rem;
+  }
+  
+}
+.reviews{
+  padding: 100px 8% 120px;
+  background: rgb(0, 0, 0);
+}
+.review-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+.box{
+  background: #000000;
+  padding: 35px 45px;
+  height: 50vh;
+  border-radius: 8px;
+  transition: 0.5s ease;
+  text-align: center;
+}
+.img img{
+  width: 100px;
+  border-radius: 100px;
+  height: 80px;
+}
+@media (max-width:920px){
+  .review-content{
+      grid-template-columns: 1fr;
+  }
 }
